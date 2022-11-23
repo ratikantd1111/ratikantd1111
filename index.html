@@ -1,236 +1,346 @@
 <!DOCTYPE html>
-<html>
-    <head>
-<style>
-@import url(//fonts.googleapis.com/css?family=Open+Sans:400,700,800,300);
+<html lang="en">
+<head>
+    <title>Webpage Design</title>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
 
-html {
-    font-size: 16px;
-}
-body {
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <style>
+    *{
     margin: 0;
     padding: 0;
-    font-family: 'Open Sans','Helvetica Neue',Helvetica, sans-serif;
-    line-height: 1.45;
 }
-header {
-    color: #FFFFFF;
-    background-color: #284b63;
-    padding: 80px 0;
-    text-align: center;
+.asdf {
+    background-color: black;
+    
+    
 }
-h1 {
-  font-size: 3rem;
-  margin: 0 0 16px 0;
+.main{
+    width:1200px;
+    
+    background: linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%), url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEidmBCkAwmBrTRhAVf6dwUcmqsOl4lUYogkLCuvDJqg8nieFblRWlHsFegnsv_CQvwA00E61j8QPUHFgKY-cxF_4J5HjNBKWgMiQhmvB50NTyr-pkDxXmSJHwf1OlF17JpATTJve9wzx5GQKEYRYF2Kk2iz5xPshiirBZmtuHsASy_A8ZtmNLNIIo8y/s320/1%20%282%29.jpg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: scroll;
+    height: 100vh;
 }
-h2 {
-  font-weight: 300;
-  font-size: 1.5rem;
-  margin: 0 0 16px 0;
+
+.navbar{
+    width: 1200px;
+    background-color: green;
+    height: 75px;
+    margin: auto;
 }
-.container {
-    margin: 0 auto;
-    padding: 0 20px 0 20px;
-    max-width: 900px;
+
+.icon{
+    width: 200px;
+    float: left;
+    height: 70px;
 }
-.btn {
-    display: inline-block;
-    color: white;
-    font-weight: 500;
-    font-size: 1.25rem;
-    background: #549DA0;
-    border: none;
-    border-radius: 5px;
-    padding: 12px 16px;
+
+.logo{
+    color: #ff7200;
+    font-size: 35px;
+    font-family: Arial;
+    padding-left: 20px;
+    float: left;
+    padding-top: 10px;
+    margin-top: 5px
+}
+
+.menu{
+    width: 400px;
+    float: left;
+    height: 70px;
+}
+
+ul{
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul li{
+    list-style-type: none;
+    
+    margin-left: 62px;
+    margin-top: 27px;
+    font-size: 14px;
+}
+
+ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-family: Arial;
+    font-weight: bold;
+    transition: 0.4s ease-in-out;
+}
+
+ul li a:hover{
+    color: #ff7200;
+}
+
+.search{
+    width: 330px;
+    float: left;
+    margin-left: 270px;
+}
+
+.srch{
+    font-family: 'Times New Roman';
+    width: 200px;
+    height: 40px;
+    background: transparent;
+    border: 1px solid #ff7200;
+    margin-top: 13px;
+    color: #fff;
+    border-right: none;
+    font-size: 16px;
+    float: left;
+    padding: 10px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.btn{
+    width: 100px;
+    height: 40px;
+    background: #ff7200;
+    border: 2px solid #ff7200;
+    margin-top: 13px;
+    color: #fff;
+    font-size: 15px;
+    border-bottom-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    transition: 0.2s ease;
     cursor: pointer;
 }
-.btn:hover {
-    background: #468486;
+.btn:hover{
+    color: #000;
 }
-section {
-    text-align: center;
-    padding: 40px 0;
+
+.btn:focus{
+    outline: none;
 }
-.features {
-    background: #FFFFFF;
-    color: #000000;
+
+.srch:focus{
+    outline: none;
 }
-.feature {
-    width: 32%;
-    display: inline-block;
-    font-size: 1rem;
+
+.content{
+    width: 1200px;
+    height: auto;
+    margin: auto;
+    color: #fff;
+    position: relative;
 }
-.feature img {
-    width: 40%;
+
+.content .par{
+    padding-left: 20px;
+    padding-bottom: 25px;
+    font-family: Arial;
+    letter-spacing: 1.2px;
+    line-height: 30px;
 }
-.quote {
-    background:#549DA0;
-    color:#FFFFFF;
+
+.content h1{
+    font-family: 'Times New Roman';
+    font-size: 50px;
+    padding-left: 20px;
+    margin-top: 9%;
+    letter-spacing: 2px;
 }
-blockquote {
-    margin: 0;
-    padding: 0;
-    text-align: center;
+
+.content .cn{
+    width: 160px;
+    height: 40px;
+    background: #ff7200;
+    border: none;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .4s ease;
+    
 }
-blockquote p {
-    margin: 0 0 5px 0;
-    font-size: 1.5rem;
-}
-blockquote cite {
-    font-size: 1rem;
-    font-style: italic;
-}  
-blockquote cite:before {
-    content: '–';
-    margin-right: 5px;
-}
-footer {
-    background: #353535;
-    padding: 32px 0;
-    text-align: center;
-    color: #868686;
-    font-size: 0.75rem;
-}
-footer ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-footer li {
-    display: inline-block;
-}
-footer li a {
-    padding: 6px;
-    font-size: 0.875rem;
+
+.content .cn a{
     text-decoration: none;
-    color: #c3c3c3;
+    color: #000;
+    transition: .3s ease;
 }
-footer li a:hover {
-    color: white;
+
+.cn:hover{
+    background-color: #fff;
 }
-.submenu {
-    left: 50%;
-    transform: translate(-50%, 0);
-    text-align:center;
+
+.content span{
+    color: #ff7200;
+    font-size: 65px
+}
+
+.form{
+    width: 250px;
+    height: 380px;
+    background: linear-gradient(to top, rgba(0,0,0,0.8)50%,rgba(0,0,0,0.8)50%);
     position: absolute;
-    background-color: #549DA0;
-    min-width: 160px;
-    border-radius: 5px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    display: none;
+    top: -20px;
+    left: 870px;
+    transform: translate(0%,-5%);
+    border-radius: 10px;
+    padding: 25px;
 }
-.submenu a {
-    color: white;
-    padding: 12px 16px;
+
+.form h2{
+    width: 220px;
+    font-family: sans-serif;
+    text-align: center;
+    color: #ff7200;
+    font-size: 22px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 2px;
+    padding: 8px;
+}
+
+.form input{
+    width: 240px;
+    height: 35px;
+    background: transparent;
+    border-bottom: 1px solid #ff7200;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    color: #fff;
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin-top: 30px;
+    font-family: sans-serif;
+}
+
+.form input:focus{
+    outline: none;
+}
+
+::placeholder{
+    color: #fff;
+    font-family: Arial;
+}
+
+.btnn{
+    width: 240px;
+    height: 40px;
+    background: #ff7200;
+    border: none;
+    margin-top: 30px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #fff;
+    transition: 0.4s ease;
+}
+.btnn:hover{
+    background: #fff;
+    color: #ff7200;
+}
+.btnn a{
     text-decoration: none;
-    display: block;
+    color: #000;
+    font-weight: bold;
 }
-.submenu a:hover {
-    background-color: #468486;
+.form .link{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    padding-top: 20px;
+    text-align: center;
 }
-@media screen and (max-width: 480px) {
-    .btn {
-        display: block;
-        font-size: 1.125rem;
-    }
-    h1 {
-        font-size: 2rem;
-        margin: 0 0 8px 0;
-    }
-    h2 {
-        font-size: 1.125rem;
-    }
-    section {
-        padding: 25px 0 15px 0;
-    } 
-    .feature {
-        width: 100%;
-        text-align: left;
-        margin: 0 0 10px 0;
-        font-size: 1rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .feature img {
-        width: 15%;
-        min-width: 60px;
-        margin-right: 20px;
-    }
-    .quote {
-        padding: 30px 0;
-    }
-    blockquote p {
-        font-size: 1.125rem;
-    }
-    blockquote cite {
-        font-size: 0.875rem;
-    }
-    footer {
-        padding: 30px 0 10px 0;
-    }
-    footer li {
-        display: block;
-        margin: 5px 0;
-    }
-    .submenu {
-        width: 100%;
-        position: relative;
-    }
-}  
-</style>
-        <title>My Landing Page</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-    </head>
-    <body>
+.form .link a{
+    text-decoration: none;
+    color: #ff7200;
+}
+.liw{
+    padding-top: 15px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+.icons a{
+    text-decoration: none;
+    color: #fff;
+}
+.icons ion-icon{
+    color: #fff;
+    font-size: 30px;
+    padding-left: 14px;
+    padding-top: 5px;
+    transition: 0.3s ease;
+}
+.icons ion-icon:hover{
+    color: #ff7200;
+}
+    </style>
+</head>
+<body class="asdf">
 
-    <header>
-        <div class="container">
-        <h1>Awesome App</h1>
-        <h2>This app will change your life!</h2>
-        <a class="btn">Download Now</a>
-        <div class="submenu">
-            <a href="#">Link 1</a>
-            <a href="#">Link 2</a>
-        </div>
-        </div>
-    </header>
-    
-    <section class="features">
-        <div class="container">
-        <div class="feature">
-            <img src="https://www.sololearn.com/uploads/img_blue_pin.png" alt=""/>
-            <p>An awesome feature</p>
-        </div>
-        <div class="feature">
-            <img src="https://www.sololearn.com/uploads/img_blue_chart.png" alt=""/>
-            <p>An awesome feature</p>
-        </div>
-        <div class="feature">
-            <img src="https://www.sololearn.com/uploads/img_blue_msg.png" alt=""/>
-            <p>An awesome feature</p>
-        </div>
-        </div>
-    </section>
+    <div class="main">
+        <div class="navbar">
+            <div class="icon">
+                <h2 class="logo">Das</h2>
+            </div>
 
-    <section class="quote">
-        <blockquote class="container">
-      <p>"Some great quote!"</p>
-      <cite>Satisfied Customer
-      </cite>
-    </blockquote>
-    </section>
-    
-    <footer>
-  <div class="container">
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Contacts</a></li>
-    </ul>
-    <p>&copy; All rights reserved.</p>
-  </div>
-</footer>
+            <div class="menu">
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#">SERVICE</a></li>
+                    <li><a href="#">DESIGN</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                </ul>
+            </div>
+
+            <div class="search">
+                <input class="srch" type="search" name="" placeholder="Type To text">
+                <a href="#"> <button class="btn">Search</button></a>
+            </div>
+
+        </div> 
+        <div class="content">
+            <h1>Web Design & <br><span>Development</span> <br>Course</h1>
+            <p class="par">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt neque 
+                 expedita atque eveniet <br> quis nesciunt. Quos nulla vero consequuntur, fugit nemo ad delectus 
+                <br> a quae totam ipsa illum minus laudantium?</p>
+
+                <button class="cn"><a href="#">JOIN US</a></button>
+
+                <div class="form">
+                <form>
+                    <h2>Login Here</h2>
+                    <input type="email" name="email" placeholder="Enter Email Here">
+                    <input type="password" name="" placeholder="Enter Password Here">
+                    <button class="btnn"><a href="https://www.getcustomketodiet.org/get-video?id=ratikantd1&tid=INSTAGRAM" target="_blank">Login</a></button>
+
+                    <p class="link">Don't have an account<br>
+                    <a href="#">Sign up </a> here</a></p>               </form>
+                    <p class="liw">Log in with</p>
+
+                    <div class="icons">
+                        <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+                        <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+                        <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+                        <a href="#"><ion-icon name="logo-google"></ion-icon></a>
+                        <a href="#"><ion-icon name="logo-skype"></ion-icon></a>
+                    </div>
+
+                </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <script></script>
 </body>
 </html>
